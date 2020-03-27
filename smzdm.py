@@ -40,3 +40,4 @@ else:
     print(info)
     # 通过Server酱发送状态 不需要可以删除
     requests.post(serverChan, data={'text': data['nickname'] + '签到信息', 'desp': info})
+ 
