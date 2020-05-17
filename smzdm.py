@@ -3,13 +3,13 @@ import requests
 import json
 
 # 设置Server酱post地址 不需要可以删除
-serverChan = "https://sc.ftqq.com/**********************************************.send"
+serverChan = "https://sc.ftqq.com/*****************************************.send"
 # 状态地址
 current_url = 'https://zhiyou.smzdm.com/user/info/jsonp_get_current'
 # 签到地址
 checkin_url = 'https://zhiyou.smzdm.com/user/checkin/jsonp_checkin'
 # 用用户名和密码登录后获取Cookie
-userCookie = "sess=*********************; user=user:*********|*********; smzdm_id=*********;"
+userCookie = "**************************************************************"
 headers = {
     'Referer': 'https://www.smzdm.com/',
     'Host': 'zhiyou.smzdm.com',
@@ -28,7 +28,7 @@ def req(url):
 
 
 data = req(current_url)
-if data['checkin']['has_checkin'] == False:
+if data['checkin']['has_checkin']:
     info = '%s ：%s 你目前积分：%s，经验值：%s，金币：%s，碎银子：%s，威望：%s，等级：%s，已经签到：%s天' % (data['sys_date'], data['nickname'], data['point'], data['exp'], data['gold'], data['silver'], data['prestige'], data['level'],data['checkin']['daily_checkin_num'])
     print(info)
     # 通过Server酱发送状态 不需要可以删除
