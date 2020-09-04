@@ -17,3 +17,7 @@
 3.[Google](https://www.google.com)
 
 4.[Baidu](https://www.baidu.com)
+
+
+##备注
+-Cookie填写三个参数就可以了，请注意填写正确，通过Chrome可以查看。userCookie = "sess=xxxxxx; user=user:xxx|xxx; smzdm_id=xxx;"
